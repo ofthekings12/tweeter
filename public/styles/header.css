@@ -1,0 +1,10 @@
+.header-profile {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(72, 82, 24);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png"); ;
+}
