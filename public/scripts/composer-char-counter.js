@@ -7,7 +7,10 @@ $(document).ready(function() {
     console.log(length, remainingLength)
     $('#counter').text(remainingLength);
     if (remainingLength < 0) {
-      $('#counter').addClass("warning")
+      $('#counter').addClass("counter")
+    }
+    if (remainingLength > 0) {
+      $('#counter').removeClass("counter")
     }
   })
   
