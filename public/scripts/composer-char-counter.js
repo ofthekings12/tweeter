@@ -1,8 +1,16 @@
 $(document).ready(function() {
   let maxLength = 140;
-  $('.new-tweet #tweet-text').keypress(function() {
+  $('#tweet-text').keydown(function() {
+    console.log("hello")
     let length = $(this).val().length;
-    console.log(length)
-    $('.counter').text(length);
+    let remainingLength = maxLength-length;
+    console.log(length, remainingLength)
+    $('#counter').text(remainingLength);
+    if (remainingLength < 0) {
+      $('#counter').addClass("warning")
+    }
   })
+  
 });
+
+

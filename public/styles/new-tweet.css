@@ -1,6 +1,5 @@
 .new-tweet {
   width: 75%;
- 
 }
 
 .tweet-text textarea {
@@ -12,14 +11,15 @@
   resize: none;
   font-size: 25px;
   font-family: 'Source Sans Pro', sans-serif;
-  display: block;
-  margin: 1em 0;
-  
 }
 
 .underText {
   display: flex;
   justify-content: space-between;
+}
+
+.underText output > warning {
+  color: red;
 }
 
 .tweet-text button {
@@ -32,4 +32,7 @@
   font-family: "Bungee", sans-serif;
   color: #545149;
 }
+
+
+ 
   
