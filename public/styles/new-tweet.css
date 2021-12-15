@@ -4,9 +4,7 @@
 
 #tweet-text {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+
 
 
 }
@@ -16,3 +14,9 @@
   font-family: "Bungee", sans-serif;
   color: white;
 }
+
+.tweet-text output {
+  font-family: "Bungee", sans-serif;
+  color: #545149;
+}
+  
