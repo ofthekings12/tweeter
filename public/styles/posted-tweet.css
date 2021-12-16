@@ -23,16 +23,38 @@ article.tweet:hover {
 }
 
 article.tweet .content {
-  display: flex;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px;
-  border-bottom: 5px solid black;
+  position: relative;
+  width: 100;
+  font-family: "Source Sans Pro", sans-serif;
+  border: 3px solid black;
+  padding: 10px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 1em;
+  word-break: break-all;
 }
 
 article.tweet footer {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  justify-content: space-between;
   font-size: 20px;
+  margin-bottom: 6px;
+  padding-right: 1em;
+  padding-left: 1em;;
+}
+
+
+.fa-heart:hover {
+  color: #ffb340;
+}
+
+.fa-retweet:hover {
+  color: #ffb340;
+}
+
+.fa-flag:hover {
+  color: #ffb340;
 }
