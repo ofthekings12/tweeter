@@ -7,15 +7,43 @@
 }
 
 article.tweet {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-style: solid;
   width: 100%
 }
 
-article.tweet header {
+.header-user {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+img.avatar {
+  width: 70px;
+  margin-right: 10px;
+
+}
+
+.userName {
+  
+}
+
+.userHandle {
+  opacity: 50%;
 }
 
 article.tweet:hover {
@@ -27,7 +55,6 @@ article.tweet .content {
   width: 100;
   font-family: "Source Sans Pro", sans-serif;
   border: 3px solid black;
-  padding: 10px;
   border-top: none;
   border-right: none;
   border-left: none;
