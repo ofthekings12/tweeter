@@ -72,6 +72,8 @@ const hideErrorBox = function() {
     $.ajax({url: "/tweets", method: "POST", data: text})
       .then((result) => {
         loadTweets();
+        $("#tweet-text").val("")
+        $("#counter").text(140)
       })
   }
   //load the tweets before rendering
