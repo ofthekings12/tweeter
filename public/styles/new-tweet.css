@@ -34,5 +34,14 @@
   color: red; 
 }
 
+
+.error {
+  color: red;
+  display: flex;
+  justify-content: center;
+  border: 5px solid red;
+  margin: 1em;
+  padding: 10px;
+}
  
   

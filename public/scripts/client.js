@@ -6,13 +6,19 @@
 
 
 $(document).ready(() => {
+//function to hide errorbox
+const hideErrorBox = function() {
+  $(".new-tweet .error").hide()
+};
 
+// function to prevent XSS
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // creating html <article> element containing user's name, handle, avatar, and entered quack(tweet)
   const createTweetElement = function(tweet) {
     let $tweet = `<article class="tweet">
     <header class="header-user">
@@ -42,38 +48,41 @@ $(document).ready(() => {
     return $tweet;
     
   }
-  
+  //form submission
   $('#post-tweet').on('click', (event) => {
+    //callign this function to prevent browser taking user to /tweets/ url
     event.preventDefault()
     const tweetContent = $("#tweet-text")
     console.log(tweetContent.val())
     const formData = $('.form').serialize()
-
+    //form logic for if a user enters < 0 or > 140 characters
     if (tweetContent.val().length <= 0) {
-      alert("Quack cannot be empty")
+      $(".new-tweet .error").text("🦆You need to type SOMETHING to Quack!🦆");
+      $(".new-tweet .error").slideDown();
     } else if (tweetContent.val().length > 140) {
-      alert("Quack cannot be over 140 characters")
-
+      $(".new-tweet .error").text("🦆Quacks cannot be more than 140 characters!🦆");
+      $(".new-tweet .error").slideDown();
     } else {
       postTweet(formData);
     }
 
   })
-  
+  //post the tweet
   const postTweet = (text) => {
     $.ajax({url: "/tweets", method: "POST", data: text})
       .then((result) => {
         loadTweets();
       })
   }
-  
+  //load the tweets before rendering
   const loadTweets = () => {
+    hideErrorBox();
     $.ajax({url: "/tweets", method: "GET"})
       .then((result) => {
         renderTweets(result);
       })
   }
-  
+  //empty tweet container
   const renderTweets = function(tweets) {
     $(".tweet-container").empty() 
     for (tweet of tweets) {
@@ -81,7 +90,7 @@ $(document).ready(() => {
       $('.tweets-container').prepend($tweet);
     }
   }
-
+//empties the container, loads the previous tweets and renders the new tweet to be included.
 loadTweets(); 
 
 });

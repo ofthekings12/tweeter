@@ -38,10 +38,6 @@ img.avatar {
 
 }
 
-.userName {
-  
-}
-
 .userHandle {
   opacity: 50%;
 }
@@ -72,6 +68,7 @@ article.tweet footer {
   padding-right: 1em;
   padding-left: 1em;;
 }
+
 
 
 .fa-heart:hover {
