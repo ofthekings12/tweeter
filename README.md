@@ -16,6 +16,7 @@ When a user submits an invalid tweet (the tweet textarea is empty or contains mo
 
 !["Demo Gif of Quacker"](https://github.com/ofthekings12/tweeter/blob/master/docs/quacker.gif?raw=true)
 
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
