@@ -1,6 +1,6 @@
 $(document).ready(function() {
   let maxLength = 140;
-  $('#tweet-text').keydown(function() {
+  $('#tweet-text').keyup(function() {
     let length = $(this).val().length;
     let remainingLength = maxLength-length;
     $('#counter').text(remainingLength);
@@ -13,5 +13,3 @@ $(document).ready(function() {
   })
   
 });
-
-
