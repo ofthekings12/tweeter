@@ -86,7 +86,7 @@ const hideErrorBox = function() {
   }
   //empty tweet container
   const renderTweets = function(tweets) {
-    $(".tweet-container").empty() 
+    $(".tweets-container").empty() 
     for (tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('.tweets-container').prepend($tweet);
